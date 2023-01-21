@@ -8,7 +8,10 @@ ENV https_proxy $HTTPS_PROXY
 
 RUN mkdir -p /usr/share/man/man1 /usr/share/man/man2
 
-RUN apt-get update && \
+#RUN apt-get update && \
+RUN echo "deb http://security.debian.org/debian-security buster/updates main contrib non-free" >> /etc/apt/sources.list && \
+    echo "deb http://deb.debian.org/debian buster-proposed-updates main contrib non-free" >> /etc/apt/sources.list && \
+    apt --allow-releaseinfo-change update && apt upgrade  -y && \
     apt-get install -y tzdata iptables ebtables net-tools ipset stress-ng iproute2 fuse util-linux procps curl openjdk-11-jre && \
     rm -rf /var/lib/apt/lists/*
 
