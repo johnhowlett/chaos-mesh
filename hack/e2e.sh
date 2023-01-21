@@ -142,6 +142,9 @@ kind_node_images["v1.17.17"]="kindest/node:v1.17.17@sha256:66f1d0d91a88b8a001811
 kind_node_images["v1.18.19"]="kindest/node:v1.18.19@sha256:7af1492e19b3192a79f606e43c35fb741e520d195f96399284515f077b3b622c"
 kind_node_images["v1.20.7"]="kindest/node:v1.20.7@sha256:cbeaf907fc78ac97ce7b625e4bf0de16e3ea725daf6b04f930bd14c67c671ff9"
 kind_node_images["v1.22.1"]="kindest/node:v1.22.1@sha256:100b3558428386d1372591f8d62add85b900538d94db8e455b66ebaf05a3ca3a"
+kind_node_images["v1.23.13"]="kindest/node:v1.23.13@sha256:ef453bb7c79f0e3caba88d2067d4196f427794086a7d0df8df4f019d5e336b61"
+kind_node_images["v1.24.7"]="kindest/node:v1.24.7@sha256:577c630ce8e509131eab1aea12c022190978dd2f745aac5eb1fe65c0807eb315"
+kind_node_images["v1.25.3"]="kindest/node:v1.25.3@sha256:f52781bc0d7a19fb6c405c2af83abfeb311f130707a0e219175677e366cc45d1"
 
 function e2e::image_build() {
     if [ -n "$SKIP_BUILD" ]; then
