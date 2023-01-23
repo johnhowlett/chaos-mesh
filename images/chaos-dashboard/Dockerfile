@@ -1,4 +1,4 @@
-FROM debian:buster-slim
+FROM debian:bullseye-slim
 
 ARG HTTPS_PROXY
 ARG HTTP_PROXY
@@ -10,8 +10,8 @@ ARG UI
 ARG SWAGGER
 
 #RUN apt-get update && \ 
-RUN echo "deb http://security.debian.org/debian-security buster/updates main contrib non-free" >> /etc/apt/sources.list && \
-    echo "deb http://deb.debian.org/debian buster-proposed-updates main contrib non-free" >> /etc/apt/sources.list && \
+RUN echo "deb http://security.debian.org/debian-security bullseye-security main contrib non-free" >> /etc/apt/sources.list && \
+    echo "deb http://deb.debian.org/debian bullseye-proposed-updates main contrib non-free" >> /etc/apt/sources.list && \
     apt --allow-releaseinfo-change update && apt upgrade  -y && \
     apt-get install tzdata ca-certificates -y && \
     rm -rf /var/lib/apt/lists/*
